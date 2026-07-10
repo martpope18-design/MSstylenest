@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.msstylenest.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.example.msstylenest.ui.categories.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
+        android:id="@+id/navigation_category_products"
+        android:name="com.example.msstylenest.ui.categories.CategoryProductsFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_product_list">
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.msstylenest.ui.cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/navigation_checkout"
+        android:name="com.example.msstylenest.ui.cart.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.msstylenest.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_order_history"
+        android:name="com.example.msstylenest.ui.profile.OrderHistoryFragment"
+        android:label="Order History"
+        tools:layout="@layout/fragment_order_history" />
+
+    <fragment
+        android:id="@+id/navigation_admin"
+        android:name="com.example.msstylenest.ui.admin.AdminFragment"
+        android:label="Admin"
+        tools:layout="@layout/fragment_admin" />
+
+    <fragment
+        android:id="@+id/navigation_manage_products"
+        android:name="com.example.msstylenest.ui.admin.ManageProductsFragment"
+        android:label="Manage Products"
+        tools:layout="@layout/fragment_manage_products" />
+
+    <fragment
+        android:id="@+id/navigation_product_detail"
+        android:name="com.example.msstylenest.ui.product.ProductDetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
